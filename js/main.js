@@ -21,9 +21,9 @@ alert('I numeri che devi memorizzare sono: '+ numRandom);
 
 var secondi = 3000;
 
-var interval = setInterval(function(){
+var interval = setTimeout(function(){
 
-
+//Faccio inserire i numeri all'utente
     var numUtente = [];
 
     for ( var i = 0; i < numGenerati; i++){
@@ -34,12 +34,36 @@ var interval = setInterval(function(){
     console.log(numUtente);
     
 
+    var punteggio = 0;
+
+    for ( var i = 0; i < numGenerati; i++){
+        if (numRandom.includes(numUtente[i])){
+            punteggio++
+        }
+    }
+
+    if (punteggio === 5){
+        console.log('Complimenti!!...hai vinto. Hai effettuato il massimo del punteggio!! 5 su ', punteggio);
+    }else if ((punteggio < 5) & (punteggio > 0)){
+        console.log('Complimenti, hai vinto! Il tuo punteggio è: ', punteggio);
+    }else{
+        console.log('Non hai indovinato neanche un numero. Il tuo punteggio è : ', punteggio);
+    }
+
+
+
+
+
     if(i < numGenerati){
         clearInterval(interval);
     }
+
+    return numUtente;
 },secondi);
 
-console.log('ciao');
+
+
+
 
 
 
