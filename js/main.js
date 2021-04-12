@@ -16,10 +16,30 @@ for ( var i = 0; i < numGenerati; i++){
 };
 console.log(numRandom);
 
-setTimeout(function(){
-    alert('I numeri che devi memorizzare sono: '+ numRandom);
-},3000);
 
+alert('I numeri che devi memorizzare sono: '+ numRandom);
+
+var secondi = 3000;
+
+var interval = setInterval(function(){
+
+
+    var numUtente = [];
+
+    for ( var i = 0; i < numGenerati; i++){
+        var numeroUtente = (parseInt(prompt('Inserisci i numeri che hai memorizzato')));
+
+        numUtente.push(numeroUtente);
+    }
+    console.log(numUtente);
+    
+
+    if(i < numGenerati){
+        clearInterval(interval);
+    }
+},secondi);
+
+console.log('ciao');
 
 
 
