@@ -27,7 +27,7 @@ var interval = setTimeout(function(){
     var numUtente = [];
 
     for ( var i = 0; i < numGenerati; i++){
-        var numeroUtente = (parseInt(prompt('Inserisci i numeri che hai memorizzato')));
+        var numeroUtente = (parseInt(prompt('Inserisci il '+ i + ' numero che hai memorizzato')));
 
         numUtente.push(numeroUtente);
     }
