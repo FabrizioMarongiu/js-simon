@@ -52,12 +52,6 @@ var interval = setTimeout(function(){
 
 
 
-
-
-    if(i < numGenerati){
-        clearInterval(interval);
-    }
-
     return numUtente;
 },secondi);
 
